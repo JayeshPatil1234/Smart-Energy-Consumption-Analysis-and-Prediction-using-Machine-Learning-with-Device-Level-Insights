@@ -11,3 +11,21 @@ Short-Term Memory (LSTM) networks and Linear Regression as a baseline model. It 
 interactive visualizations, smart energy-saving suggestions, and a web-based dashboard built using Flask,
 HTML, CSS, and JavaScript. The system aims to improve energy efficiency, lower electricity costs, and
 support sustainable energy usage behavior.
+
+## Project Workflow (Week-wise)
+
+### Week 1: Data Collection & Understanding
+- Loaded Smart Home Energy dataset
+- Verified schema, missing values, and target variable
+
+### Week 2: Data Cleaning & Preprocessing
+- Converted Date and Time into datetime
+- Cleaned missing and invalid values
+
+### Week 3: Feature Engineering
+- Created time-based features (hour, day, month)
+- Encoded categorical variables
+
+### Week 4: Baseline Model Development
+- Implemented Linear Regression
+- Evaluated using MAE and RMSE
