@@ -29,3 +29,16 @@ support sustainable energy usage behavior.
 ### Week 4: Baseline Model Development
 - Implemented Linear Regression
 - Evaluated using MAE and RMSE
+
+---
+
+## Week 5 – LSTM Model Development
+
+- Implemented LSTM-based time series forecasting model
+- Performed Min-Max scaling and sequence generation (24-hour window)
+- Designed stacked LSTM architecture with dropout
+- Trained model using Adam optimizer and MSE loss
+- Evaluated model using MAE and RMSE
+- Observed improved performance compared to baseline Linear Regression
+
+Documentation: `documentation/week5_lstm_model.md`
