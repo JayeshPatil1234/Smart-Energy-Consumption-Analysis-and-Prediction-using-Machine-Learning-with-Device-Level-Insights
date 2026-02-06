@@ -42,3 +42,22 @@ support sustainable energy usage behavior.
 - Observed improved performance compared to baseline Linear Regression
 
 Documentation: `documentation/week5_lstm_model.md`
+
+---
+
+## 🔹 Week 6: Model Evaluation and Integration
+
+**Goals:**
+- Evaluate LSTM model performance
+- Compare LSTM with baseline Linear Regression
+- Prepare model for deployment
+
+**Key Activities:**
+- Calculated MAE, RMSE, and R² score
+- Visualized Actual vs Predicted energy consumption
+- Saved trained model and scalers
+- Selected best-performing model for integration
+
+**Outcome:**
+LSTM outperformed the baseline model and was finalized for deployment in the smart energy prediction system.
+
