@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block content %}
+<div class="insights-container">
+    <header class="mb-12">
+        <h1 class="font-syne">Smart Energy Insights</h1>
+        <p class="text-muted">Personalized actions for your Indian household.</p>
+    </header>
+
+    <div id="recs-grid" class="insights-grid">
+    </div>
+
+    <section class="mt-16">
+        <h3 class="font-syne mb-6">System Alerts</h3>
+        <div class="glass-card">
+            <div class="flex items-center gap-4">
+                <span class="badge badge-error">ANOMALY</span>
+                <p>Your AC usage was 34% higher than average on Tuesday. Check for window seal leaks.</p>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %} {% block extra_js %}
+<script src="/static/js/recommendations.js"></script>
+{% endblock %}

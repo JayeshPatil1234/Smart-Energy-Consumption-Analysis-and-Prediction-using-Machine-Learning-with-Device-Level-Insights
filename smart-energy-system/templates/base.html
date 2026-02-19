@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnergyAI | Corporate Smart Energy</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/components.css"> {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="logo mb-10 flex items-center gap-2">
+            <img src="/static/assets/logo.svg" width="30" alt="L">
+            <h1 class="text-xl tracking-tighter">EnergyAI</h1>
+        </div>
+        <nav>
+            <a href="/" class="nav-link">Home</a>
+            <a href="/dashboard" class="nav-link">Dashboard</a>
+            <a href="/recommendations" class="nav-link">AI Insights</a>
+            <a href="/reports" class="nav-link">Reports</a>
+            <a href="/settings" class="nav-link">Settings</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/utils.js"></script>
+    <script src="/static/js/mockData.js"></script>
+    <script src="/static/js/charts.js"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+
+</html>

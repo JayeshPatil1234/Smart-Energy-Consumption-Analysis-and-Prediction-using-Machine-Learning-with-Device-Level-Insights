@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block content %}
+<div id="settings-view" class="max-w-4xl">
+    <h2 class="text-4xl mb-8">Settings</h2>
+
+    <div class="glass-card mb-8">
+        <h4 class="mb-6">API Configuration</h4>
+        <div class="form-group">
+            <label>OpenAI API Key</label>
+            <input type="password" id="api-openai" class="form-control" value="sk-••••••••••••••••">
+        </div>
+        <button class="btn btn-secondary" onclick="Utils.showToast('Key saved to local storage')">Save Keys</button>
+    </div>
+
+    <div class="glass-card mb-8">
+        <h4 class="mb-6">Preferences</h4>
+        <div class="flex justify-between items-center mb-4">
+            <span>Dark Mode (Always On)</span>
+            <label class="toggle-switch">
+                <input type="checkbox" checked disabled>
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="flex justify-between items-center mb-4">
+            <span>Email Monthly Reports</span>
+            <label class="toggle-switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+
+    <div class="glass-card border-red-500/30">
+        <h4 class="text-red-400 mb-6">Danger Zone</h4>
+        <p class="text-sm text-muted mb-4">Permanently delete all household and history data.</p>
+        <button class="btn bg-red-500/20 text-red-500" onclick="API.delete('/api/data/household'); localStorage.clear(); window.location.href='/'">Reset All Data</button>
+    </div>
+</div>
+{% endblock %}

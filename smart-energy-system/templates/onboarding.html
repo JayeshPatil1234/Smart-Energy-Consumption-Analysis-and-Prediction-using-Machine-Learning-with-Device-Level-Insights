@@ -1,0 +1,66 @@
+{% extends "base.html" %} {% block extra_css %}
+<link rel="stylesheet" href="/static/css/forms.css">{% endblock %} {% block content %}
+<div id="onboarding-view" class="max-w-2xl mx-auto">
+    <div class="wizard-progress">
+        <div class="step-node active">1</div>
+        <div class="step-node">2</div>
+        <div class="step-node">3</div>
+        <div class="step-node">4</div>
+    </div>
+
+    <div class="glass-card">
+        <div id="step-1" class="step-content">
+            <h2 class="mb-6">Basic Information</h2>
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" id="name" class="form-control" placeholder="John Doe">
+            </div>
+            <div class="form-group">
+                <label>Location</label>
+                <select id="location" class="form-control">
+                    <option>India</option>
+                </select>
+            </div>
+            <button class="btn btn-primary btn-next w-full">Continue</button>
+        </div>
+
+        <div id="step-2" class="step-content hidden">
+            <h2 class="mb-6">Home Specs</h2>
+            <div class="form-group">
+                <label>Home Size (sq ft)</label>
+                <input type="number" id="sqft" class="form-control" placeholder="2000">
+            </div>
+            <div class="form-group">
+                <label>Number of Residents</label>
+                <input type="number" id="residents" class="form-control" placeholder="4">
+            </div>
+            <div class="flex gap-4">
+                <button class="btn btn-secondary btn-prev w-full">Back</button>
+                <button class="btn btn-primary btn-next w-full">Next</button>
+            </div>
+        </div>
+
+        <div id="step-3" class="step-content hidden">
+            <h2 class="mb-6">Appliances</h2>
+            <p class="text-sm text-muted mb-4">Select all that apply</p>
+            <div class="grid grid-cols-2 gap-4 mb-6">
+                <label><input type="checkbox" value="AC"> Air Conditioner</label>
+                <label><input type="checkbox" value="EV"> EV Charger</label>
+                <label><input type="checkbox" value="Solar"> Solar Panels</label>
+                <label><input type="checkbox" value="Heater"> Water Heater</label>
+            </div>
+            <div class="flex gap-4">
+                <button class="btn btn-secondary btn-prev w-full">Back</button>
+                <button class="btn btn-primary btn-next w-full">Next</button>
+            </div>
+        </div>
+
+        <div id="step-4" class="step-content hidden text-center">
+            <h2 class="mb-6">Ready to Optimize?</h2>
+            <p class="mb-8">We've calculated your baseline consumption profile. Let's head to your dashboard.</p>
+            <button class="btn btn-primary btn-next w-full">Finalize & Enter Dashboard</button>
+        </div>
+    </div>
+</div>
+{% endblock %} {% block extra_js %}
+<script src="/static/js/onboarding.js"></script>{% endblock %}

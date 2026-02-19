@@ -1,0 +1,63 @@
+{% extends "base.html" %} {% block extra_css %}
+<link rel="stylesheet" href="/static/css/dashboard.css">
+<link rel="stylesheet" href="/static/css/charts.css"> {% endblock %} {% block content %}
+<div id="dashboard-view">
+    <div class="flex justify-between items-end mb-10">
+        <div>
+            <h2 class="text-4xl mb-2">Energy Dashboard</h2>
+            <div class="live-ticker">
+                <div class="ticker-dot"></div>
+                Live Demand: <span id="live-usage">...</span>
+            </div>
+        </div>
+        <button class="btn btn-primary" onclick="window.location.href='/reports'">Export Data</button>
+    </div>
+
+    <div class="kpi-grid">
+        <div class="glass-card kpi-card">
+            <h3>Usage This Month</h3>
+            <div class="value"><span id="kpi-usage">0</span> <small class="text-sm text-muted">kWh</small></div>
+            <div class="delta minus">↓ 12% vs last month</div>
+        </div>
+        <div class="glass-card kpi-card">
+            <h3>Estimated Bill</h3>
+            <div class="value">₹<span id="kpi-cost">0</span></div>
+            <div class="delta plus">↑ ₹4.20 projected</div>
+        </div>
+        <div class="kpi-card">
+            <h3>CARBON FOOTPRINT</h3>
+            <p class="value">195 kg</p>
+            <p class="trend">India Grid Average</p>
+        </div>
+        <div class="kpi-card">
+            <h3>SAVINGS POTENTIAL</h3>
+            <p class="value"><span class="currency-symbol">₹</span>84</p>
+            <p class="status">Optimized</p>
+        </div>
+    </div>
+
+    <div class="chart-grid">
+        <div class="glass-card">
+            <h4 class="mb-6">Consumption History (30 Days)</h4>
+            <div class="chart-container">
+                <canvas id="usageChart"></canvas>
+            </div>
+        </div>
+        <div class="glass-card">
+            <h4 class="mb-6">Appliance Mix</h4>
+            <div class="chart-container">
+                <canvas id="applianceChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="glass-card mb-10">
+        <h4 class="mb-6">AI Forecast (Next 7 Days)</h4>
+        <div class="chart-container">
+            <canvas id="predictionChart"></canvas>
+        </div>
+    </div>
+</div>
+{% endblock %} {% block extra_js %}
+<script src="/static/js/dashboard.js"></script>
+{% endblock %}
